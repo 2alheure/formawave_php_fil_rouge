@@ -14,6 +14,23 @@
 
 <body>
     <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Mon super blog</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="liste-articles.html">Mes super articles</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
         <div class="jumbotron">
             <h1 class="display-3">Mon super blog</h1>
             <p class="lead">Venez lire ma super vie sur mon super blog ! Je raconte tout ce que je fais !</p>
@@ -33,36 +50,46 @@
         </div>
 
 
-        <h2>Mes super articles</h2>
-        <div class="list-group my-4">
-            <article class="list-group-item list-group-item-action" aria-current="true">
-                <div class="d-flex w-100 justify-content-between">
-                    <h3 class="mb-1">Le titre d'un super article</h5>
-                        <small>Le 28/12/2020</small>
-                </div>
-                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                    blandit.</p>
-                <small><a href="article.html">Lire l'article.</a></small>
-            </article>
-            <article class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                    <h3 class="mb-1">Le titre d'un super article</h5>
-                        <small class="text-muted">Le 28/12/2020</small>
-                </div>
-                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                    blandit.</p>
-                <small class="text-muted"><a href="article.html">Lire l'article.</a></small>
-            </article>
-            <article class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                    <h3 class="mb-1">Le titre d'un super article</h5>
-                        <small class="text-muted">Le 28/12/2020</small>
-                </div>
-                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                    blandit.</p>
-                <small class="text-muted"><a href="article.html">Lire l'article.</a></small>
-            </article>
-        </div>
+        <h2>Qui suis-je ?</h2>
+        <p class="my-4">
+            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi laborum eligendi exercitationem facilis
+                rerum nihil deserunt ut, officiis magnam praesentium fugiat optio deleniti repudiandae. Blanditiis culpa
+                inventore vel aspernatur quasi!</span>
+            <span>Enim iste nam quos modi laboriosam fugit pariatur expedita quasi sit blanditiis est inventore dolorem
+                similique, reiciendis tenetur neque temporibus nulla incidunt repellat quae, sapiente rerum saepe
+                officia! Quas, dolores!</span>
+            <span>Corporis repellendus praesentium nulla suscipit amet ex neque molestias illo dolores soluta officiis
+                quasi pariatur dolore ratione quaerat rerum id recusandae, temporibus doloremque, hic similique et
+                deleniti! Et, dolores itaque?</span>
+            <span>Iure laboriosam quibusdam nesciunt consectetur labore inventore neque quasi. Recusandae saepe
+                explicabo voluptate, praesentium quidem porro officia earum laboriosam libero. Distinctio exercitationem
+                atque placeat rerum reprehenderit unde mollitia nam architecto.</span>
+            <span>In natus nihil distinctio impedit a fugiat ea, odio dolor est, rem dolorum atque molestias! Adipisci
+                numquam suscipit iure asperiores nemo! Doloribus sed voluptate unde, iure nulla nam quibusdam
+                eligendi?</span>
+        </p>
+
+        <h2>Contactez-moi</h2>
+        <p class="my-4">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="email">Adresse email</label>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId"
+                    placeholder="Ex : adresse@email.fr">
+                <small id="emailHelpId" class="form-text text-muted">L'adresse email sur laquelle je pourrai vous
+                    répondre.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Votre message</label>
+                <textarea class="form-control" name="message" id="message"
+                    rows="5">Ecrivez votre message ici ;-)</textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+
+        </p>
     </div>
 
 </body>
