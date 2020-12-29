@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -32,33 +31,54 @@
 
 
         <h1>Mes super articles</h1>
+
+        <?php
+            $articles = array(
+                array(
+                    'titre' => 'Le titre d\'un super article',
+                    'date' => 'Le 28/12/2020',
+                    'accroche' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur ipsum soluta! Minima perspiciatis vel ullam. Suscipit nemo voluptatum magnam corrupti consectetur atque porro quos cupiditate eius, beatae nulla molestiae.',
+                    'lien' => 'article.php',
+                ),
+                array(
+                    'titre' => 'Le titre d\'un super article 2',
+                    'date' => 'Le 28/12/2020',
+                    'accroche' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur ipsum soluta! Minima perspiciatis vel ullam. Suscipit nemo voluptatum magnam corrupti consectetur atque porro quos cupiditate eius, beatae nulla molestiae.',
+                    'lien' => 'article2.php',
+                ),
+                array(
+                    'titre' => 'Le titre d\'un super article 3',
+                    'date' => 'Le 28/12/2020',
+                    'accroche' => 'Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.',
+                    'lien' => 'article2.php',
+                ),
+            );
+        ?>
+
         <div class="list-group my-4">
             <article class="list-group-item list-group-item-action" aria-current="true">
                 <div class="d-flex w-100 justify-content-between">
-                    <h2 class="mb-1">Le titre d'un super article</h2>
-                    <small>Le 28/12/2020</small>
+                    <h2 class="mb-1"><?php echo $articles[0]['titre']; ?></h2>
+                    <small><?php echo $articles[0]['date']; ?></small>
                 </div>
-                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                    blandit.</p>
-                <small class="text-muted"><a href="article.html">Lire l'article.</a></small>
+                <p class="mb-1"><?php echo $articles[0]['accroche']; ?></p>
+                <small class="text-muted"><a href="<?php echo $articles[0]['lien']; ?>">Lire l'article.</a></small>
             </article>
-            <article class="list-group-item list-group-item-action">
+            <article class="list-group-item list-group-item-action" aria-current="true">
                 <div class="d-flex w-100 justify-content-between">
-                    <h2 class="mb-1">Le titre d'un super article</h2>
-                    <small class="text-muted">Le 28/12/2020</small>
+                    <h2 class="mb-1"><?php echo $articles[1]['titre']; ?></h2>
+                    <small><?php echo $articles[1]['date']; ?></small>
                 </div>
-                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                    blandit.</p>
-                <small class="text-muted"><a href="article2.html">Lire l'article.</a></small>
+                <p class="mb-1"><?php echo $articles[1]['accroche']; ?></p>
+                <small class="text-muted"><a href="<?php echo $articles[1]['lien']; ?>">Lire l'article.</a></small>
             </article>
-            <article class="list-group-item list-group-item-action">
+            <article class="list-group-item list-group-item-action" aria-current="true">
                 <div class="d-flex w-100 justify-content-between">
-                    <h2 class="mb-1">Le titre d'un super article</h2>
-                    <small class="text-muted">Le 28/12/2020</small>
+                    <h2 class="mb-1"><?php echo $articles[1]['titre']; ?></h2>
+                    <small><?php echo $articles[1]['date']; ?></small>
                 </div>
-                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
-                    blandit.</p>
-                <small class="text-muted"><a href="article3.html">Lire l'article.</a></small>
+                <p class="mb-1"><?php echo $articles[1]['accroche']; ?></p>
+                <small class="text-muted"><a href="<?php echo $articles[1]['lien']; ?>">Lire l'article.</a></small>
             </article>
         </div>
     </div>
