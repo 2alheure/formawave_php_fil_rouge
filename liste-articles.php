@@ -33,53 +33,43 @@
         <h1>Mes super articles</h1>
 
         <?php
-            $articles = array(
-                array(
-                    'titre' => 'Le titre d\'un super article',
-                    'date' => 'Le 28/12/2020',
-                    'accroche' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur ipsum soluta! Minima perspiciatis vel ullam. Suscipit nemo voluptatum magnam corrupti consectetur atque porro quos cupiditate eius, beatae nulla molestiae.',
-                    'lien' => 'article.php',
-                ),
-                array(
-                    'titre' => 'Le titre d\'un super article 2',
-                    'date' => 'Le 28/12/2020',
-                    'accroche' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur ipsum soluta! Minima perspiciatis vel ullam. Suscipit nemo voluptatum magnam corrupti consectetur atque porro quos cupiditate eius, beatae nulla molestiae.',
-                    'lien' => 'article2.php',
-                ),
-                array(
-                    'titre' => 'Le titre d\'un super article 3',
-                    'date' => 'Le 28/12/2020',
-                    'accroche' => 'Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.',
-                    'lien' => 'article2.php',
-                ),
-            );
+        $articles = array(
+            array(
+                'titre' => 'Le titre d\'un super article',
+                'date' => 'Le 28/12/2020',
+                'accroche' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur ipsum soluta! Minima perspiciatis vel ullam. Suscipit nemo voluptatum magnam corrupti consectetur atque porro quos cupiditate eius, beatae nulla molestiae.',
+                'lien' => 'article.php',
+            ),
+            array(
+                'titre' => 'Le titre d\'un super article 2',
+                'date' => 'Le 28/12/2020',
+                'accroche' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur ipsum soluta! Minima perspiciatis vel ullam. Suscipit nemo voluptatum magnam corrupti consectetur atque porro quos cupiditate eius, beatae nulla molestiae.',
+                'lien' => 'article2.php',
+            ),
+            array(
+                'titre' => 'Le titre d\'un super article 3',
+                'date' => 'Le 28/12/2020',
+                'accroche' => 'Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.',
+                'lien' => 'article2.php',
+            ),
+        );
         ?>
 
         <div class="list-group my-4">
-            <article class="list-group-item list-group-item-action" aria-current="true">
-                <div class="d-flex w-100 justify-content-between">
-                    <h2 class="mb-1"><?php echo $articles[0]['titre']; ?></h2>
-                    <small><?php echo $articles[0]['date']; ?></small>
-                </div>
-                <p class="mb-1"><?php echo $articles[0]['accroche']; ?></p>
-                <small class="text-muted"><a href="<?php echo $articles[0]['lien']; ?>">Lire l'article.</a></small>
-            </article>
-            <article class="list-group-item list-group-item-action" aria-current="true">
-                <div class="d-flex w-100 justify-content-between">
-                    <h2 class="mb-1"><?php echo $articles[1]['titre']; ?></h2>
-                    <small><?php echo $articles[1]['date']; ?></small>
-                </div>
-                <p class="mb-1"><?php echo $articles[1]['accroche']; ?></p>
-                <small class="text-muted"><a href="<?php echo $articles[1]['lien']; ?>">Lire l'article.</a></small>
-            </article>
-            <article class="list-group-item list-group-item-action" aria-current="true">
-                <div class="d-flex w-100 justify-content-between">
-                    <h2 class="mb-1"><?php echo $articles[1]['titre']; ?></h2>
-                    <small><?php echo $articles[1]['date']; ?></small>
-                </div>
-                <p class="mb-1"><?php echo $articles[1]['accroche']; ?></p>
-                <small class="text-muted"><a href="<?php echo $articles[1]['lien']; ?>">Lire l'article.</a></small>
-            </article>
+            <?php
+            foreach ($articles as $article) { ?>
+
+                <article class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h2 class="mb-1"><?php echo $article['titre']; ?></h2>
+                        <small><?php echo $article['date']; ?></small>
+                    </div>
+                    <p class="mb-1"><?php echo $article['accroche']; ?></p>
+                    <small class="text-muted"><a href="<?php echo $article['lien']; ?>">Lire l'article.</a></small>
+                </article>
+
+            <?php }
+            ?>
         </div>
     </div>
 
