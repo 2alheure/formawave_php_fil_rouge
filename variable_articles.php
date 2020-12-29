@@ -19,6 +19,9 @@ $articles = array(
                         Quod odio modi earum reiciendis repudiandae eos, sint ratione aspernatur quos molestias a similique rem cum, odit esse fugit commodi, facere architecto iste est maxime perspiciatis libero debitis veniam. Quae.
                         Officia laudantium totam enim velit eum, repellat deleniti illo facere incidunt nostrum et doloremque optio nemo. Earum id sapiente, sequi accusamus illum quis voluptatibus, quidem molestias vel ut ab porro.',
         'lien' => 'article.php',
+        'image' => 'banner.jpg',
+        'image_alt' => 'Une super image qui sert à illustrer mon super article',
+        'image_copyright' => 'Photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/article?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>',
     ),
     array(
         'titre' => 'Le titre d\'un super article 2',
@@ -39,6 +42,9 @@ $articles = array(
                         Tempora suscipit velit itaque quidem quasi necessitatibus animi blanditiis reiciendis provident. Mollitia velit sit placeat eveniet, esse ipsum sunt qui perspiciatis tempora, corporis, laudantium hic enim ratione illo earum quasi!
                         Quos veritatis iure deserunt autem consectetur assumenda quidem doloremque alias nemo ullam recusandae dolorem, ipsa possimus atque, impedit enim tenetur debitis odio, cumque inventore pariatur consequuntur error praesentium! Dolorum, culpa?',
         'lien' => 'article2.php',
+        'image' => 'banner.jpg',
+        'image_alt' => 'Une super image qui sert à illustrer mon super article',
+        'image_copyright' => 'Photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/article?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>',
     ),
     array(
         'titre' => 'Le titre d\'un super article 3',
@@ -59,10 +65,16 @@ $articles = array(
                         Nesciunt iusto laudantium odio dignissimos doloribus nihil quia quaerat facere nostrum tempora atque, delectus magnam officiis similique exercitationem libero esse consectetur fugiat qui. Beatae architecto culpa, similique laudantium quisquam dolorum!
                         Animi repellat voluptatum dolorum obcaecati dolor sit odit repudiandae ipsa molestias neque incidunt nisi expedita atque eaque magnam fugit et cum suscipit, rem nemo in corrupti aliquam consequuntur. Totam, tempora.',
         'lien' => 'article2.php',
+        'image' => 'banner.jpg',
+        'image_alt' => 'Une super image qui sert à illustrer mon super article',
+        'image_copyright' => 'Photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/article?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>',
     ),
     array(
         'titre' => 'Le titre d\'un super article Test',
         'date' => 'Le 28/12/2020',
         'lien' => 'article2.php',
+        'image' => 'banner.jpg',
+        'image_alt' => 'Une super image qui sert à illustrer mon super article',
+        'image_copyright' => 'Photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/article?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>',
     ),
 );
