@@ -16,14 +16,14 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Mon super blog</a>
+                <a class="navbar-brand" href="index.php">Mon super blog</a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+                            <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="liste-articles.html">Mes super articles</a>
+                            <a class="nav-link active" href="liste-articles.php">Mes super articles</a>
                         </li>
                     </ul>
                 </div>
@@ -40,7 +40,7 @@
                 </div>
                 <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
                     blandit.</p>
-                <small class="text-muted"><a href="article.html">Lire l'article.</a></small>
+                <small class="text-muted"><a href="article.php">Lire l'article.</a></small>
             </article>
             <article class="list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-between">
@@ -49,7 +49,7 @@
                 </div>
                 <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
                     blandit.</p>
-                <small class="text-muted"><a href="article2.html">Lire l'article.</a></small>
+                <small class="text-muted"><a href="article2.php">Lire l'article.</a></small>
             </article>
             <article class="list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-between">
@@ -58,7 +58,7 @@
                 </div>
                 <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius
                     blandit.</p>
-                <small class="text-muted"><a href="article3.html">Lire l'article.</a></small>
+                <small class="text-muted"><a href="article3.php">Lire l'article.</a></small>
             </article>
         </div>
     </div>
