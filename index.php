@@ -1,4 +1,7 @@
-<?php include 'header.php'; ?>
+<?php
+$titre = 'Mon super blog';
+include 'header.php';
+?>
 
 <div class="jumbotron">
     <h1 class="display-3">Mon super blog</h1>
