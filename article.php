@@ -1,7 +1,7 @@
 <?php
 include 'functions.php';
-include 'variable_articles.php';
-$selected_article = $articles[0];
+include './db_functions_with_pdo.php';
+$selected_article = getArticle(connectDB(), 1);
 
 $titre = $selected_article['titre'] . ' | Mon super blog';
 

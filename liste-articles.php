@@ -1,6 +1,7 @@
 <?php
 include 'functions.php';
-include 'variable_articles.php';
+include './db_functions_with_pdo.php';
+$articles = getArticle(connectDB());
 
 $titre = 'Mes super articles | Mon super blog';
 
