@@ -57,10 +57,13 @@
 
         <div class="list-group my-4">
             <?php
+
+            // On utilise une boucle foreach car on parcourt un tableau
             foreach ($articles as $article) { ?>
 
                 <article class="list-group-item list-group-item-action" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
+                        <!-- On change la référence pour s'accorder à la boucle -->
                         <h2 class="mb-1"><?= $article['titre'] ?></h2>
                         <small><?= $article['date'] ?></small>
                     </div>
