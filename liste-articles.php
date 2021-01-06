@@ -1,9 +1,19 @@
 <?php
+
+/**
+ * On inclut nos fonctions et nos articles
+ * car on en a besoin ici
+ */
 include 'functions.php';
 include 'variable_articles.php';
 
+/**
+ * On définit le titre de la page 
+ * pour éviter les erreurs dans le header
+ * 
+ * Puis on inclut le header
+ */
 $titre = 'Mes super articles | Mon super blog';
-
 include 'header.php';
 ?>
 
@@ -29,4 +39,6 @@ include 'header.php';
     ?>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php
+// On inclut, enfin, le footer
+include 'footer.php';

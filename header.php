@@ -1,7 +1,15 @@
+<?php 
+    /**
+     * Ce fichier représente le début de chaque page
+     * Ca évite de le copier-coller partout.
+     */
+?>
+
 <!doctype html>
 <html lang="en">
 
 <head>
+    <!-- Ici on a le titre, qui est une variable PHP -->
     <title><?= $titre ?></title>
     <!-- Required meta tags -->
     <meta charset="utf-8">

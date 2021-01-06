@@ -1,7 +1,18 @@
 <?php
+/**
+ * On définit le titre de la page 
+ * pour éviter les erreurs dans le header
+ * 
+ * Puis on inclut le header
+ */
 $titre = 'Mon super blog';
 include 'header.php';
 ?>
+
+
+<!-- On se retrouve donc avec un "template" (un gabarit) qui est
+header (qui a besoin du titre), suivi du corps de la page, suivi de footer -->
+
 
 <div class="jumbotron">
     <h1 class="display-3">Mon super blog</h1>
@@ -60,4 +71,6 @@ include 'header.php';
     </form>
 </p>
 
-<?php include 'footer.php';
+<?php 
+// On inclut, enfin, le footer
+include 'footer.php';
