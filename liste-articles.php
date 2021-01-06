@@ -33,31 +33,33 @@
         <h1>Mes super articles</h1>
 
         <?php
-            $articles = array(
-                array(
-                    'titre' => 'Le titre d\'un super article',
-                    'date' => 'Le 28/12/2020',
-                    'accroche' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur ipsum soluta! Minima perspiciatis vel ullam. Suscipit nemo voluptatum magnam corrupti consectetur atque porro quos cupiditate eius, beatae nulla molestiae.',
-                    'lien' => 'article.php',
-                ),
-                array(
-                    'titre' => 'Le titre d\'un super article 2',
-                    'date' => 'Le 28/12/2020',
-                    'accroche' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur ipsum soluta! Minima perspiciatis vel ullam. Suscipit nemo voluptatum magnam corrupti consectetur atque porro quos cupiditate eius, beatae nulla molestiae.',
-                    'lien' => 'article2.php',
-                ),
-                array(
-                    'titre' => 'Le titre d\'un super article 3',
-                    'date' => 'Le 28/12/2020',
-                    'accroche' => 'Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.',
-                    'lien' => 'article2.php',
-                ),
-            );
+        // On crée notre tableau multi-dimensionnel + associatif
+        $articles = array(
+            array(
+                'titre' => 'Le titre d\'un super article',
+                'date' => 'Le 28/12/2020',
+                'accroche' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur ipsum soluta! Minima perspiciatis vel ullam. Suscipit nemo voluptatum magnam corrupti consectetur atque porro quos cupiditate eius, beatae nulla molestiae.',
+                'lien' => 'article.php',
+            ),
+            array(
+                'titre' => 'Le titre d\'un super article 2',
+                'date' => 'Le 28/12/2020',
+                'accroche' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur ipsum soluta! Minima perspiciatis vel ullam. Suscipit nemo voluptatum magnam corrupti consectetur atque porro quos cupiditate eius, beatae nulla molestiae.',
+                'lien' => 'article2.php',
+            ),
+            array(
+                'titre' => 'Le titre d\'un super article 3',
+                'date' => 'Le 28/12/2020',
+                'accroche' => 'Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.',
+                'lien' => 'article2.php',
+            ),
+        );
         ?>
 
         <div class="list-group my-4">
             <article class="list-group-item list-group-item-action" aria-current="true">
                 <div class="d-flex w-100 justify-content-between">
+                    <!-- On doit aussi remplacer les références ici pour pointer vers le tableau -->
                     <h2 class="mb-1"><?php echo $articles[0]['titre']; ?></h2>
                     <small><?php echo $articles[0]['date']; ?></small>
                 </div>
