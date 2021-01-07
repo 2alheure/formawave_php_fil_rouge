@@ -1,7 +1,9 @@
 <?php
 include 'functions.php';
-include './db_functions_with_pdo.php';
-$articles = getArticle(connectDB());
+include './db_functions_with_pdo.php';  // Ici on choisit d'utiliser PDO
+
+// On récupère à présent les articles depuis la DB et non une variable
+$articles = getArticle(connectDB());    // getArticle prend en paramètre $bdd, qui est en fait le retour de connectDB
 
 $titre = 'Mes super articles | Mon super blog';
 
