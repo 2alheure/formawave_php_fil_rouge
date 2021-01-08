@@ -24,9 +24,6 @@ include 'header.php';
                 <small><?= $article['date'] ?></small>
             </div>
             <p class="mb-1"><?= accrocheArticle($article) ?></p>
-            <!-- Les liens ont disparu, 
-                aussi on crée un paramètre de requête que l'on appelle id 
-                et on lui donne la valeur de l'id de l'article que l'on souhaite consulter -->
             <small class="text-muted"><a href="article.php?id=<?= $article['id'] ?>">Lire l'article.</a></small>
         </article>
 

@@ -42,9 +42,7 @@ function getArticle($bdd, $id = null)
                 return $article;
             }
         } else {
-            // Redirige vers page errors/500
             header('location: errors/500.php');
-            // Toujours interrompre le script au cas où
             die;
         }
     }

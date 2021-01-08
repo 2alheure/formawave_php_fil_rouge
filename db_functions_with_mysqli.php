@@ -42,7 +42,6 @@ function getArticle($bdd, $id = null)
                 return false;
             }
 
-            // Attention ! Ici, on ne doit plus aller chercher le lien !
             $stmt->bind_result($article_id, $titre, $date, $contenu, $image, $image_alt, $image_copyright);
 
 
@@ -54,16 +53,13 @@ function getArticle($bdd, $id = null)
                     'titre' => $titre,
                     'date' => $date,
                     'contenu' => $contenu,
-                    // Ici on en renvoie plus le lien !
                     'image' => $image,
                     'image_alt' => $image_alt,
                     'image_copyright' => $image_copyright,
                 );
             }
         } else {
-            // Redirige vers page errors/500
             header('location: errors/500.php');
-            // Toujours interrompre le script au cas où
             die;
         }
     }
