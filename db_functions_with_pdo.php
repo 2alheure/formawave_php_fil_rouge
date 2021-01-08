@@ -47,3 +47,23 @@ function getArticle($bdd, $id = null)
         }
     }
 }
+
+function insertArticle($bdd, array $article = null)
+{
+    // On inclut les fonctions pour utiliser checkArticle
+    require_once('functions.php');
+
+    if (checkArticle($article)) {
+        // On met la date à celle du jour (au format MySQL)
+        $article['date'] = date('Y-m-d');
+        
+        $stmt = $bdd->prepare('INSERT INTO articles VALUE (NULL, :titre, :contenu, :image, :image_alt, :image_copyright, :date)');
+        $verif = $stmt->execute($article); // On peut exécuter avec $article car il contient ces champs-là
+        // var_dump($article);
+        // var_dump($stmt->errorInfo());die;
+
+        return $verif;
+    } else {
+        die('L\'article évalué n\'est pas correctement rempli !');
+    }
+}
