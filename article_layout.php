@@ -1,9 +1,14 @@
 <?php
 include 'functions.php';
-include './db_functions_with_pdo.php';  // Ici on choisit d'utiliser PDO
+include './db_functions_with_pdo.php';
 
-// On récupère à présent les articles depuis la DB et non une variable
-$selected_article = getArticle(connectDB(), $article_id);    // getArticle prend en paramètre $bdd, qui est en fait le retour de connectDB
+$selected_article = getArticle(connectDB(), $article_id);
+
+// Il faut à présent prévoir le cas où l'article demandé n'existe pas
+if (empty($selected_article)) {
+    // Redirige vers page 404
+    header('location: 404.php');
+}
 
 $titre = $selected_article['titre'] . ' | Mon super blog';
 
