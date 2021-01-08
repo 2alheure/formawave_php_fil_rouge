@@ -25,6 +25,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="liste-articles.php">Mes super articles</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="creer-article.php">Créer un super article</a>
+                        </li>
                     </ul>
                 </div>
             </div>
