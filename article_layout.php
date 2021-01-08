@@ -7,7 +7,9 @@ $selected_article = getArticle(connectDB(), $article_id);
 // Il faut à présent prévoir le cas où l'article demandé n'existe pas
 if (empty($selected_article)) {
     // Redirige vers page 404
-    header('location: 404.php');
+    header('location: errors/404.php');
+    // Toujours interrompre le script au cas où
+    die;
 }
 
 $titre = $selected_article['titre'] . ' | Mon super blog';

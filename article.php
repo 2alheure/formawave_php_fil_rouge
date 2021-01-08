@@ -4,8 +4,11 @@
 $article_id = $_GET['id'];
 
 // Attention, ça n'empêche pas de vérifier sa valeur !
-if (!is_numeric($id)) {
-    die('Une erreur s\'est produite !');
+if (!is_numeric($article_id)) {
+    // Redirige vers page errors/500
+    header('location: errors/500.php');
+    // Toujours interrompre le script au cas où
+    die;
 }
 
 include './article_layout.php';

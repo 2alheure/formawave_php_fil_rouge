@@ -1,6 +1,7 @@
 <?php
 
-function connectDB() {
+function connectDB()
+{
     require 'config_db.php';
 
     $bdd =  new mysqli($host, $user, $password, $dbname);
@@ -18,7 +19,8 @@ function connectDB() {
  * 
  * Sinon, on prend TOUS les articles
  */
-function getArticle($bdd, $id = null) {
+function getArticle($bdd, $id = null)
+{
     if (empty($id)) {   // Tous les articles
 
         $query = $bdd->query('SELECT * FROM articles');
@@ -59,7 +61,10 @@ function getArticle($bdd, $id = null) {
                 );
             }
         } else {
-            die('Erreur lors de la tentative de récupération d\'un article.');
+            // Redirige vers page errors/500
+            header('location: errors/500.php');
+            // Toujours interrompre le script au cas où
+            die;
         }
     }
 }
