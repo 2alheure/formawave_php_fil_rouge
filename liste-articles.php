@@ -1,9 +1,8 @@
 <?php
 include 'functions.php';
-include './db_functions_with_pdo.php';  // Ici on choisit d'utiliser PDO
+include './db_functions_with_pdo.php';
 
-// On récupère à présent les articles depuis la DB et non une variable
-$articles = getArticle(connectDB());    // getArticle prend en paramètre $bdd, qui est en fait le retour de connectDB
+$articles = getArticle(connectDB());
 
 $titre = 'Mes super articles | Mon super blog';
 
@@ -25,7 +24,10 @@ include 'header.php';
                 <small><?= $article['date'] ?></small>
             </div>
             <p class="mb-1"><?= accrocheArticle($article) ?></p>
-            <small class="text-muted"><a href="<?= $article['lien'] ?>">Lire l'article.</a></small>
+            <!-- Les liens ont disparu, 
+                aussi on crée un paramètre de requête que l'on appelle id 
+                et on lui donne la valeur de l'id de l'article que l'on souhaite consulter -->
+            <small class="text-muted"><a href="article.php?id=<?= $article['id'] ?>">Lire l'article.</a></small>
         </article>
 
     <?php }
