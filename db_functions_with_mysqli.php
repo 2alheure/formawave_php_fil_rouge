@@ -42,7 +42,7 @@ function getArticle($bdd, $id = null)
                 return false;
             }
 
-            $stmt->bind_result($article_id, $titre, $date, $contenu, $image, $image_alt, $image_copyright);
+            $stmt->bind_result($article_id, $titre, $contenu, $image, $image_alt, $image_copyright, $date);
 
 
             if (!($stmt->fetch())) {
@@ -62,5 +62,26 @@ function getArticle($bdd, $id = null)
             header('location: errors/500.php');
             die;
         }
+    }
+}
+
+function insertArticle($bdd, array $article = null)
+{
+    // On inclut les fonctions pour utiliser checkArticle
+    require_once('functions.php');
+
+    
+    if (checkArticle($article)) {
+        // On met la date à celle du jour (au format MySQL)
+        $article['date'] = date('Y-m-d');
+
+        $stmt = $bdd->prepare('INSERT INTO articles VALUE (NULL, ?, ?, ?, ?, ?, ?)');
+        // On bind les paramètres de la requête
+        $stmt->bind_param('ssssss', $article['titre'], $article['contenu'], $article['image'], $article['image_alt'], $article['image_copyright'], $article['date']);
+        $verif = $stmt->execute(); // On peut exécuter avec $article car il contient ces champs-là
+
+        return $verif;
+    } else {
+        die('L\'article évalué n\'est pas correctement rempli !');
     }
 }

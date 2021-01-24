@@ -1,6 +1,6 @@
 <?php
 include 'functions.php';
-include './db_functions_with_pdo.php';
+include './db_functions_with_mysqli.php';
 
 $selected_article = getArticle(connectDB(), $article_id);
 
