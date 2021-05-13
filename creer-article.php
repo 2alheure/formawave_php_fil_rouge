@@ -4,9 +4,6 @@ include 'header.php';
 
 if (!empty($_GET['error'])) {
 ?>
-    <!-- On peut imaginer afficher une erreur 
-    si un paramètre de requête nous indique que ça s'est précédemment mal passé -->
-
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
         Une erreur s'est glissée dans la soumission du formulaire. Veuillez recommencer.
         <button type="button" class="close" data-dismiss="alert" aria-label="Fermer">
@@ -17,7 +14,8 @@ if (!empty($_GET['error'])) {
 
 <h1>Créer un super article</h1>
 <p class="my-4">
-<form action="creer-article-handler.php" method="post">
+    <!-- On doit ajouter l'attribut enctype="multipart/form-data" pour gérer les fichiers -->
+<form action="creer-article-handler.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="titre">Titre</label>
         <input type="text" class="form-control" name="titre" id="titre" aria-describedby="titre-help" placeholder="Titre">
@@ -26,8 +24,11 @@ if (!empty($_GET['error'])) {
 
     <div class="form-group">
         <label for="image">Image</label>
-        <input type="url" class="form-control" name="image" id="image" aria-describedby="image-help" placeholder="Image">
-        <small id="image-help" class="form-text text-muted">L'URL de l'image d'illustration de l'article.</small>
+        <!-- On limite la taille des uploads à 10 Mo -->
+        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+        <!-- On remplace l'input "text" en input "file" -->
+        <input type="file" class="form-control-file" name="image" id="image" placeholder="Image" aria-describedby="image-helper" accept="image/*" MA>
+        <small id="image-helper" class="form-text text-muted">L'image d'illustration de l'article</small>
     </div>
 
     <div class="form-group">

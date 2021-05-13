@@ -67,18 +67,15 @@ function getArticle($bdd, $id = null)
 
 function insertArticle($bdd, array $article = null)
 {
-    // On inclut les fonctions pour utiliser checkArticle
     require_once('functions.php');
 
     
     if (checkArticle($article)) {
-        // On met la date à celle du jour (au format MySQL)
         $article['date'] = date('Y-m-d');
 
         $stmt = $bdd->prepare('INSERT INTO articles VALUE (NULL, ?, ?, ?, ?, ?, ?)');
-        // On bind les paramètres de la requête
         $stmt->bind_param('ssssss', $article['titre'], $article['contenu'], $article['image'], $article['image_alt'], $article['image_copyright'], $article['date']);
-        $verif = $stmt->execute(); // On peut exécuter avec $article car il contient ces champs-là
+        $verif = $stmt->execute();
 
         return $verif;
     } else {
